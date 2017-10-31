@@ -1,0 +1,42 @@
+$columns: 12;
+$gutter: 15px;
+$breakpoints: (
+	lg: 1200px,
+	md: 992px,
+	sm: 768px,
+	xs: 576px
+);
+
+@mixin row() {
+	box-sizing: border-box;
+	max-width: 1200px;
+	padding: 0 15px;
+	width: 100%;
+	margin: 0 auto;
+	font-size: 0;
+
+	@media screen and (max-width: map-get($breakpoints, lg)) {
+		max-width: 960px;
+	}
+
+	@media screen and (max-width: map-get($breakpoints, sm)) {
+		max-width: 100%;
+	}
+}
+
+@mixin col($n, $align: top) {
+	box-sizing: border-box;
+	display: inline-block;
+    width: 100% / $columns * $n;
+	font-size: 1rem;
+	vertical-align: $align;
+	padding: 0 $gutter;
+}
+
+@mixin offset($n) {
+	margin-right: 100% / $columns * $n;
+}
+
+@mixin hide() {
+	display: none;
+}
