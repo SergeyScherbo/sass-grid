@@ -1,1 +1,12 @@
 @import 'grid';
+
+.row {
+  @include row();
+}
+
+.col-4 {
+  @include col(4);
+
+  min-height: 300px;
+  background-color: lightblue;
+}

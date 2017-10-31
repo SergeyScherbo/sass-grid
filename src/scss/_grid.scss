@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+$display: flex;
 $columns: 12;
 $gutter: 15px;
 $breakpoints: (
@@ -8,12 +13,16 @@ $breakpoints: (
 );
 
 @mixin row() {
-	box-sizing: border-box;
-	max-width: 1200px;
-	padding: 0 15px;
-	width: 100%;
-	margin: 0 auto;
-	font-size: 0;
+  @if $display == block {
+  	font-size: 0;
+  } @else if $display == flex {
+    display: $display;
+  }
+
+  max-width: 1200px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
 
 	@media screen and (max-width: map-get($breakpoints, lg)) {
 		max-width: 960px;
@@ -25,11 +34,15 @@ $breakpoints: (
 }
 
 @mixin col($n, $align: top) {
-	box-sizing: border-box;
-	display: inline-block;
-    width: 100% / $columns * $n;
-	font-size: 1rem;
-	vertical-align: $align;
+  @if $display == block {
+    display: inline-block;
+    vertical-align: $align;
+    font-size: 1rem;
+  } @else if $display == flex {
+    $align: null;
+  }
+
+  width: 100% / $columns * $n;
 	padding: 0 $gutter;
 }
 
