@@ -1,8 +1,13 @@
 * {
   box-sizing: border-box; }
 
+body {
+  font-family: 'Fira Sans', sans-serif;
+  text-align: center; }
+
 .row {
   display: flex;
+  flex-wrap: wrap;
   max-width: 1200px;
   padding: 0 15px;
   width: 100%;
@@ -13,9 +18,45 @@
   @media screen and (max-width: 768px) {
     .row {
       max-width: 100%; } }
+  .row:not(:last-of-type) {
+    margin-bottom: 50px; }
+
+.col {
+  min-height: 100px;
+  line-height: 98px;
+  border-right: 1px solid #86c5da;
+  border-top: 1px solid #86c5da;
+  border-bottom: 1px solid #86c5da;
+  color: steelblue;
+  background-color: lightblue; }
+  .col:first-of-type {
+    border-left: 1px solid #86c5da; }
+
+.col-1 {
+  width: 8.33333%;
+  padding: 0 15px; }
+
+.col-6 {
+  width: 50%;
+  padding: 0 15px; }
+
+.col-3 {
+  width: 25%;
+  padding: 0 15px; }
 
 .col-4 {
   width: 33.33333%;
-  padding: 0 15px;
-  min-height: 300px;
-  background-color: lightblue; }
+  padding: 0 15px; }
+
+@media screen and (max-width: 991px) {
+  .first-row .col-1 {
+    width: 16.66667%;
+    padding: 0 15px; } }
+
+@media screen and (max-width: 575px) {
+  .first-row .col-1 {
+    width: 33.33333%;
+    padding: 0 15px; } }
+
+.third-row .col-1 {
+  margin-right: 33.33333%; }

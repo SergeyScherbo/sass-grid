@@ -17,6 +17,7 @@ $breakpoints: (
   	font-size: 0;
   } @else if $display == flex {
     display: $display;
+    flex-wrap: wrap;
   }
 
   max-width: 1200px;
