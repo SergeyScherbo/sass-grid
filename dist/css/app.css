@@ -21,53 +21,19 @@ body {
   .row:not(:last-of-type) {
     margin-bottom: 50px; }
 
-.col {
+@media screen and (max-width: 768px) {
+  .row-one .one {
+    width: 100%;
+    padding: 0 10px; }
+    .row-one .one:not(:last-of-type) {
+      margin-bottom: 10px; } }
+
+.column > div {
   min-height: 100px;
-  line-height: 98px;
-  border-right: 1px solid #86c5da;
-  border-top: 1px solid #86c5da;
-  border-bottom: 1px solid #86c5da;
-  color: steelblue;
-  background-color: lightblue; }
-  .col:first-of-type {
-    border-left: 1px solid #86c5da; }
+  line-height: 100px;
+  background-color: #4586FF;
+  color: #fff; }
 
-.col-1 {
+.one {
   width: 8.33333%;
-  padding: 0 15px; }
-
-.col-6 {
-  width: 50%;
-  padding: 0 15px; }
-
-.col-3 {
-  width: 25%;
-  padding: 0 15px; }
-
-.col-4 {
-  width: 33.33333%;
-  padding: 0 15px; }
-
-@media screen and (max-width: 991px) {
-  .first-row .col-1 {
-    width: 16.66667%;
-    padding: 0 15px; } }
-
-@media screen and (max-width: 575px) {
-  .first-row .col-1 {
-    width: 33.33333%;
-    padding: 0 15px; } }
-
-.third-row .col-1 {
-  margin-right: 33.33333%; }
-  @media screen and (max-width: 1200px) {
-    .third-row .col-1 {
-      width: 100%;
-      padding: 0 15px;
-      margin-right: 0%; } }
-  @media screen and (max-width: 992px) {
-    .third-row .col-1 {
-      background-color: deepskyblue; } }
-  @media screen and (max-width: 768px) {
-    .third-row .col-1 {
-      background-color: lightgreen; } }
+  padding: 0 10px; }
