@@ -60,3 +60,14 @@ body {
 
 .third-row .col-1 {
   margin-right: 33.33333%; }
+  @media screen and (max-width: 1200px) {
+    .third-row .col-1 {
+      width: 100%;
+      padding: 0 15px;
+      margin-right: 0%; } }
+  @media screen and (max-width: 992px) {
+    .third-row .col-1 {
+      background-color: deepskyblue; } }
+  @media screen and (max-width: 768px) {
+    .third-row .col-1 {
+      background-color: lightgreen; } }

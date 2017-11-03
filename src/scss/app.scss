@@ -1,4 +1,5 @@
 @import 'grid';
+@import 'breakpoints';
 
 
 body {
@@ -60,5 +61,18 @@ body {
 .third-row {
   .col-1 {
     @include offset(4);
+
+    @include breakpoint-lg() {
+      @include col(12);
+      @include offset(0);
+    }
+
+    @include breakpoint-md() {
+      background-color: deepskyblue;
+    }
+
+    @include breakpoint-sm() {
+      background-color: lightgreen;
+    }
   }
 }
